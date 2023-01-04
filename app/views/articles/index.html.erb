@@ -19,7 +19,9 @@
           <%= article.description %>
         </td>
         <td>
-          please add the link to edit and delete
+          <%= link_to 'Show', article %>
+          <%= link_to 'Edit', edit_article_path(article) %>
+          <%= link_to 'Destroy', article_path(article), data: {turbo_method: :delete} %>
         </td>
       </tr>
       <% end %>
